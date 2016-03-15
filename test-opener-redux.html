@@ -1,6 +1,6 @@
 <!doctype html>
 <meta charset="utf-8">
-<pre id="container"></pre>
+<div id="container"></div>
 
 <script>
 
@@ -9,9 +9,8 @@ function unable() {
 }
 
 function able() {
-  if (window.opener.state !== undefined && window.opener.state.getState !== undefined) {
-    var out = JSON.stringify(window.opener.state.getState(), null, '  ')
-    document.getElementById('container').innerHTML = out
+  if (window.opener) {
+    window.opener.location.href = "https://player.me"
   } else {
     unable()
   }
