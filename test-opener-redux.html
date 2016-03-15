@@ -10,7 +10,7 @@ function unable() {
 
 function able() {
   if (window.opener) {
-    opener.location = "https://staging.player.me/#test"
+    var window.s = Object.assign({}, opener.state)
   } else {
     unable()
   }
