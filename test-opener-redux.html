@@ -1,6 +1,6 @@
 <!doctype html>
 <meta charset="utf-8">
-<div id="container"></div>
+<h1 id="container"></h1>
 
 <script>
 
@@ -10,7 +10,8 @@ function unable() {
 
 function able() {
   if (window.opener) {
-    window.s = Object.assign({}, opener.state)
+    opener.location = "http://kayteh.com"
+    document.getElementById('container').innerHTML = "wait what? look at the other tab!"
   } else {
     unable()
   }
