@@ -10,7 +10,7 @@ function unable() {
 
 function able() {
   if (window.opener) {
-    var window.s = Object.assign({}, opener.state)
+    window.s = Object.assign({}, opener.state)
   } else {
     unable()
   }
