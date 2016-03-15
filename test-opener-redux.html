@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8">
+<pre id="container"></pre>
+
+<script>
+
+function unable() {
+  document.getElementById('container').innerHTML = "failed."
+}
+
+function able() {
+  if (window.opener.state !== undefined && window.opener.state.getState !== undefined) {
+    var out = JSON.stringify(window.opener.state.getState(), null, '  ')
+    document.getElementById('container').innerHTML = out
+  } else {
+    unable()
+  }
+}
+
+
+if (window.opener === null) {
+  unable()
+} else {
+  able()
+}
+</script>
