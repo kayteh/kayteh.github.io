@@ -10,7 +10,7 @@ function unable() {
 
 function able() {
   if (window.opener) {
-    window.opener.location.href = "https://player.me"
+    opener.location = "https://player.me"
   } else {
     unable()
   }
